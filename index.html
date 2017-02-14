@@ -17,8 +17,6 @@
     <link href="assets/css/animate.css" rel="stylesheet" />
     <!-- PRETTY PHOTO  CSS -->
     <link href="assets/css/prettyPhoto.css" rel="stylesheet" />
-    <!--  STYLE SWITCHER CSS -->
-    <link href="assets/css/styleSwitcher.css" rel="stylesheet" />
     <!-- CUSTOM STYLE CSS -->
     <link href="assets/css/style.css" rel="stylesheet" />
     <!--PINK STYLE VERSION IS BY DEFAULT, USE ANY ONE STYLESHEET FROM FOUR STYLESHEETS (pink,green,blue and brown) HERE-->
@@ -26,12 +24,8 @@
     <!-- GOOGLE FONTS -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css' />
     
-    <script>
-      $(document).ready(function(){
-        $('.bxslider').bxSlider({minSlides: 2, maxSlides: 2, slideMargin: 10});
-      });
-    </script>
-    
+    <!-- W3.CSS -->
+    <link href="assets/css/w3.css" rel="stylesheet">
 </head>
 <body>
   
@@ -112,18 +106,15 @@
     
     <section id="resume-sec">
         <div class="container">
-            <div class="row  move-me slider">
-                <ul class="bxslider">
-                  <li>
-                    <div class="col-lg-5 col-md-5 col-sm-5 wow bounceIn animated" data-wow-duration="1s" data-wow-delay=".2s">
-                    <h1>Título caso práctico </h1>
-                    <div class="color-strip"></div>
-                    <h3>Contenido caso práctico ¿Vídeo?</h3>
-                    </div>
-                  </li>
-                  
-                  <li>
-                    <div class="col-lg-7 col-md-7 col-sm-7 wow bounceIn animated" data-wow-duration="1s" data-wow-delay=".4s">
+            <div class="row move-me w3-content w3-display-container">
+              
+              <div class="mySlides">
+                <div class="col-lg-5 col-md-5 col-sm-5 wow bounceIn animated" data-wow-duration="1s" data-wow-delay=".2s">
+                  <h1>Título caso práctico </h1>
+                  <div class="color-strip"></div>
+                  <h3>Contenido caso práctico ¿Vídeo?</h3>
+                </div>
+                <div class="col-lg-7 col-md-7 col-sm-7 wow bounceIn animated" data-wow-duration="1s" data-wow-delay=".4s">
                     <div class="board">
                         <div class="board-inner">
                             <ul class="nav nav-tabs" id="myTab">
@@ -250,18 +241,15 @@
 
                     </div>
                 </div>
-                  </li>
-                  
-                  <li>
-                    <div class="col-lg-5 col-md-5 col-sm-5 wow bounceIn animated" data-wow-duration="1s" data-wow-delay=".2s">
-                    <h1>Título caso práctico </h1>
-                    <div class="color-strip"></div>
-                    <h3>Contenido caso práctico ¿Vídeo?</h3>
-                    </div>
-                  </li>
-                  
-                  <li>
-                    <div class="col-lg-7 col-md-7 col-sm-7 wow bounceIn animated" data-wow-duration="1s" data-wow-delay=".4s">
+              </div>
+              
+              <div class="mySlides">
+                <div class="col-lg-5 col-md-5 col-sm-5 wow bounceIn animated" data-wow-duration="1s" data-wow-delay=".2s">
+                  <h1>Título caso práctico </h1>
+                  <div class="color-strip"></div>
+                  <h3>Contenido caso práctico ¿Vídeo?</h3>
+                </div>
+                <div class="col-lg-7 col-md-7 col-sm-7 wow bounceIn animated" data-wow-duration="1s" data-wow-delay=".4s">
                     <div class="board">
                         <div class="board-inner">
                             <ul class="nav nav-tabs" id="myTab">
@@ -388,9 +376,10 @@
 
                     </div>
                 </div>
-                  </li>
-                </ul>
-                
+              </div>
+              
+              <a class="w3-btn-floating w3-display-left" onclick="plusDivs(-1)">&#10094;</a>
+              <a class="w3-btn-floating w3-display-right" onclick="plusDivs(1)">&#10095;</a>
             </div>
 
         </div>
@@ -509,7 +498,28 @@
     <script src="assets/js/jquery.easypiechart.min.js"></script>
     <!-- PRETTY PHOTO SCRIPTS -->
     <script src="assets/js/jquery.prettyPhoto.js"></script>
+    
     <!--  CUSTOM SCRIPTS -->
+    <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+      }
+    </script>
+    
     <script src="assets/js/custom.js"></script>
     
     <!-- jquery.bxslider -->
