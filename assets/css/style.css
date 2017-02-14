@@ -40,12 +40,12 @@ font-weight: 900;
 color:rgb(255, 15, 101);
 }
  .color-strip {
-     margin:20px 0px 30px 0px;
-     max-width:230px;
-height: 2px;
-border-top: 0;
-background: #c4e17f;
-border-radius: 5px;
+    margin:20px 0px 30px 0px;
+    max-width:90%;
+    height: 4px;
+    border-top: 0;
+    background: #c4e17f;
+    border-radius: 5px;
 background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
 background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
 background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
@@ -104,35 +104,10 @@ color:#fff;
 
 }
     #home-sec .overlay {
-        padding-top:100px;
+        padding-top:50px;
         background:rgba(0, 0, 0, 0.80);
-        min-height:790px;
+        min-height:200px;
     }
- #home-sec .main-img {
-     
-     max-height:200px;
-   border:5px solid rgb(255, 15, 101);
-  content:url('../img/sad.jpg');  /*SAD IMAGE URL  - LEFT SIDE IMAGE*/
-  cursor:pointer;
-}
- #home-sec .main-img:hover {
-  content:url('../img/smile.jpg'); /*SIMLE IMAGE URL ON HOVER - LEFT SIDE IMAGE*/
-  cursor:pointer;
-}
-    #home-sec a,#home a:hover {
-        text-decoration:none;
-    }
-#home-sec .main-img-2 {
-     max-height:200px;
-   border:5px solid rgb(255, 15, 101);
-  content:url('../img/smile.jpg');  /*SMILE IMAGE URL  - RIGHT SIDE IMAGE*/
-  cursor:pointer;
-}
-#home-sec .main-img-2:hover {
-  content:url('../img/sad.jpg');  /*SAD IMAGE URL ON HOVER - RIGHT SIDE IMAGE*/
-  cursor:pointer;
-}
- 
 
 #home-sec h1 {
 font-weight: 900;
@@ -236,8 +211,8 @@ background-attachment: fixed;
   DOWNLOAD SECTION STYLES
  ============================================================ */
 .board{
-   width: 85%;
-margin: 0px auto;
+  width: 100%;
+  margin: 0px auto;
 }
 .board .nav-tabs {
     position: relative;
